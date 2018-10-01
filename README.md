@@ -52,7 +52,7 @@ There are 6 color classes to choose from: red, yellow, blue, purple, orange, and
 6) Next, we'll make our commit. Be sure to follow best practices when writing a commit message! Here's a link to a guide on making good commits: [Git Commits](https://chris.beams.io/posts/git-commit/)
 
 Once you feel ready, let's make our commit!
-`git commit -m "subject line -m "description"`
+`git commit -m "subject line" -m "description"`
 
 7) Now that our changes are made, we can push them to our repo.
 `git push origin <branch you made>`
@@ -69,6 +69,23 @@ Quick list of steps:
 3) Make branch `git checkout -b <branch name>`
 4) Make html table
 5) Add changes `git add index.html`
-6) Commit changes `git commit -m "subject line -m "description"`
+6) Commit changes `git commit -m "subject line" -m "description"`
 7) Push changes to repo `git push origin <branch you made>`
 8) Click Compare & pull request
+
+## Updating Forked Repo
+Sometimes a project might change quite a bit from the time you made your fork and you will need to update your forked repo to avoid merge conflicts! This article provides a quick walkthrough on how to get your fork updated: [Syncing a fork](https://help.github.com/articles/syncing-a-fork/)
+
+## Handling Merge Conflicts
+Merge conflicts can be pretty unpleasant to deal with, but they're very important to make sure we keep our code base stable! There a couple of ways you can handle a merge conflict.
+
+#### Method 1: Edit the Files
+Open your conflicting files with a text editor, such as Notepad++. Lines inside the code will indicate where the conflict occurred. Just clean up the code and make sure it works, then try committing again.
+
+#### Method 2: Stash it Away
+If you don't want to bother the merge conflict for whatever reason, you can just run `git stash .` to stash away all your changes. You will have to retype your code in this case, which generally isn't a big issue if your changes were small.
+
+#### Method 3: Different Directory
+If you don't want to go through editing the files, you can change your local directory's name and clone a fresh copy. Then, go back and compare the differences between the 2 directories and add changes as needed.
+
+This method can be pretty tedious, and isn't necessarily recommended. But if you keep running into issues, sometimes it's better to just start with a fresh copy.
